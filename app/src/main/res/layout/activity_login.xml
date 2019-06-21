@@ -8,6 +8,12 @@
     android:paddingStart="@dimen/_20sdp"
     android:paddingEnd="@dimen/_20sdp"
     tools:context=".activity.LoginActivity">
+    <ImageView
+        android:id="@+id/img"
+        android:src="@drawable/login"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,7 +21,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <LinearLayout
@@ -213,6 +219,8 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+
 
     <LinearLayout
         android:id="@+id/ll_create"
