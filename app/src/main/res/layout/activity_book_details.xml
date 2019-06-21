@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    android:orientation="vertical"
+    tools:context=".activity.BookDetailsActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="@dimen/_5sdp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_180sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/a" />
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_corner_bg"
+                android:padding="@dimen/_20sdp">
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/row_book_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    app:sparkbutton_activeImage="@drawable/ic_heart_active"
+                    app:sparkbutton_iconSize="16dp"
+                    app:sparkbutton_inActiveImage="@drawable/ic_heart_inactive"
+                    app:sparkbutton_primaryColor="@color/colorAccent"
+                    app:sparkbutton_secondaryColor="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WHEN BREATH BECOME"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_14ssp"
+                        app:fontName="@string/font_roboto_bold" />
+
+                    <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="by: Devs nik"
+                        android:textSize="@dimen/_12ssp"
+                        app:fontName="@string/font_roboto_regular" />
+
+                    <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="In my situation I was looking for a way to not call onCreate of the parent when returning to it. To do this, I used your implementation,"
+                        app:fontName="@string/font_roboto_regular" />
+
+
+                    <RatingBar
+                        style="@style/Widget.AppCompat.RatingBar.Indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:rating="2.5" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20sdp"
+                        android:gravity="center_horizontal">
+
+                        <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomButton
+                            android:id="@+id/btn_read_now"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_25sdp"
+                            android:background="@drawable/button_bg"
+                            android:backgroundTint="@color/yellow"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_15sdp"
+                            android:text="Read Now"
+                            android:textColor="@android:color/white" />
+
+                        <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_toEndOf="@+id/btn_read_now"
+                            android:background="@drawable/button_bg"
+                            android:backgroundTint="@color/black"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_15sdp"
+                            android:text="Read Leater"
+                            android:textColor="@android:color/white" />
+                    </RelativeLayout>
+
+                    <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comment"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_14ssp"
+                        app:fontName="@string/font_roboto_bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:id="@+id/rl_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

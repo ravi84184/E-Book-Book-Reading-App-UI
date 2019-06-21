@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/root_ly"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gry"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <ImageView
+                        android:id="@+id/row_book"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/a" />
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_5sdp">
+
+                    <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomTextView
+                        android:id="@+id/row_book_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Recommended"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_15ssp"
+                        app:fontName="@string/font_roboto_regular" />
+
+
+                    <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomTextView
+                        android:id="@+id/row_book_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form"
+                        android:textSize="@dimen/_10ssp"
+                        app:fontName="@string/font_roboto_regular" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RatingBar
+                            android:id="@+id/row_rating"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:rating="3.5" />
+
+                        <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_28sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/button_bg"
+                            android:paddingStart="@dimen/_15sdp"
+                            android:paddingEnd="@dimen/_15sdp"
+                            android:text="Read Later"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_10ssp"
+                            app:fontName="@string/font_roboto_regular" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/row_book_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    app:sparkbutton_activeImage="@drawable/ic_heart_active"
+                    app:sparkbutton_iconSize="16dp"
+                    app:sparkbutton_inActiveImage="@drawable/ic_heart_inactive"
+                    app:sparkbutton_primaryColor="@color/colorAccent"
+                    app:sparkbutton_secondaryColor="@color/colorPrimary" />
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
