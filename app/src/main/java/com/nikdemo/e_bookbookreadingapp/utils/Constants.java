@@ -2,6 +2,7 @@ package com.nikdemo.e_bookbookreadingapp.utils;
 
 import com.nikdemo.e_bookbookreadingapp.R;
 import com.nikdemo.e_bookbookreadingapp.model.BookModel;
+import com.nikdemo.e_bookbookreadingapp.model.PlanModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,5 +36,13 @@ public class Constants {
         catList.add("Economics");
         catList.add("Business");
         return catList;
+    }
+
+    public static ArrayList<PlanModel> getPlan() {
+        ArrayList<PlanModel> bookList = new ArrayList<>();
+        bookList.add(new PlanModel("20$", "month", 3));
+        bookList.add(new PlanModel("30$", "month", 6));
+        bookList.add(new PlanModel("50$", "year", 1));
+        return bookList;
     }
 }

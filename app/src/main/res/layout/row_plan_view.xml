@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_5sdp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/yellow"
+                android:orientation="vertical"
+                android:padding="@dimen/_2sdp">
+
+                <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/row_plan_time"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="3"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_30ssp"
+                    app:fontName="@string/font_roboto_bold" />
+
+                <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Month"
+                    android:id="@+id/row_plan"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_18ssp"
+                    app:fontName="@string/font_roboto_regular" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@color/light_gry"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomTextView
+                    android:layout_width="0dp"
+                    android:id="@+id/row_price"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="36$"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_20ssp"
+                    app:fontName="@string/font_roboto_bold" />
+
+                <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomTextView
+                    android:layout_width="0dp"
+                    android:id="@+id/text_description"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="Enjoy 3 Month all books reading"
+                    app:fontName="@string/font_roboto_regular" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

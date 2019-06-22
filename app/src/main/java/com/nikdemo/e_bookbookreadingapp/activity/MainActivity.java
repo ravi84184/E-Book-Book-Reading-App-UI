@@ -18,6 +18,9 @@ import android.widget.TextView;
 import com.nikdemo.e_bookbookreadingapp.R;
 import com.nikdemo.e_bookbookreadingapp.fragment.BookFragment;
 import com.nikdemo.e_bookbookreadingapp.fragment.HomeFragment;
+import com.nikdemo.e_bookbookreadingapp.fragment.LibraryFragment;
+import com.nikdemo.e_bookbookreadingapp.fragment.PlanFragment;
+import com.nikdemo.e_bookbookreadingapp.fragment.ProfileFragment;
 import com.nikdemo.e_bookbookreadingapp.menu.DrawerAdapter;
 import com.nikdemo.e_bookbookreadingapp.menu.DrawerItem;
 import com.nikdemo.e_bookbookreadingapp.menu.SimpleItem;
@@ -153,17 +156,21 @@ public class MainActivity extends BaseActivity implements DrawerAdapter.OnItemSe
                 break;
             }
             case MENU_POS_LIBRARY: {
+                fr = new LibraryFragment();
+                openFragment();
                 break;
             }
             case MENU_POS_FAVORITE: {
                 break;
             }
             case MENU_POS_PLAN: {
-                fr = new BookFragment();
+                fr = new PlanFragment();
                 openFragment();
                 break;
             }
             case MENU_POS_SETTING: {
+                fr = new ProfileFragment();
+                openFragment();
                 break;
             }
             case MENU_POS_LOGOUT: {
