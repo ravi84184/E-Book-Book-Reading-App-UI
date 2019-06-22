@@ -27,7 +27,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_user" />
+                android:src="@drawable/img5" />
 
             <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomTextView
                 android:id="@+id/tv_name"

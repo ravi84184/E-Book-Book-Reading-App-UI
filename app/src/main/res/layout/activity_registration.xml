@@ -93,7 +93,7 @@
                             android:layout_width="@dimen/_60sdp"
                             android:layout_height="@dimen/_60sdp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/icon_book"
+                            android:src="@drawable/img5"
                             app:civ_border_color="@color/yellow"
                             app:civ_border_width="@dimen/_2sdp" />
 

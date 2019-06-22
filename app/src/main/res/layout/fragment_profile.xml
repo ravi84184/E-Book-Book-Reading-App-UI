@@ -36,7 +36,7 @@
                 android:layout_height="@dimen/_50sdp"
                 android:layout_gravity="center_horizontal"
                 android:scaleType="centerCrop"
-                android:src="@drawable/b" />
+                android:src="@drawable/img5" />
 
             <com.nikdemo.e_bookbookreadingapp.utils.customui.CustomTextView
                 android:layout_width="wrap_content"
