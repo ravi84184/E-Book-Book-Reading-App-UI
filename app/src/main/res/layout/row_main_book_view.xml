@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/root_ly"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_120sdp"
@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.2">
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:cardCornerRadius="@dimen/_5sdp"
@@ -38,7 +38,7 @@
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
                         android:src="@drawable/a" />
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
             </RelativeLayout>
 
             <FrameLayout
@@ -119,6 +119,6 @@
             </FrameLayout>
 
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

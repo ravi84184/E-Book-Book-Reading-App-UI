@@ -10,7 +10,7 @@ import com.nikdemo.e_bookbookreadingapp.R;
 import com.nikdemo.e_bookbookreadingapp.utils.Constants;
 
 
-public class CustomRadioButton extends android.support.v7.widget.AppCompatRadioButton {
+public class CustomRadioButton extends androidx.appcompat.widget.AppCompatRadioButton {
 
 
     private Context mContext;

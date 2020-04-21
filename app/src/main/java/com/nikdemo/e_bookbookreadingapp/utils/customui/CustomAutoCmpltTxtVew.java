@@ -9,7 +9,7 @@ import com.nikdemo.e_bookbookreadingapp.R;
 import com.nikdemo.e_bookbookreadingapp.utils.Constants;
 
 
-public class CustomAutoCmpltTxtVew extends android.support.v7.widget.AppCompatAutoCompleteTextView {
+public class CustomAutoCmpltTxtVew extends androidx.appcompat.widget.AppCompatAutoCompleteTextView {
 
 
     private Context mContext;

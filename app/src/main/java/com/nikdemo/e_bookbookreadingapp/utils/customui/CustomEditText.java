@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 import com.nikdemo.e_bookbookreadingapp.R;
 import com.nikdemo.e_bookbookreadingapp.utils.Constants;
 
-public class CustomEditText extends android.support.v7.widget.AppCompatEditText {
+public class CustomEditText extends androidx.appcompat.widget.AppCompatEditText {
 
 
     private Context mContext;

@@ -9,7 +9,7 @@ import com.nikdemo.e_bookbookreadingapp.R;
 import com.nikdemo.e_bookbookreadingapp.utils.Constants;
 
 
-public class CustomTextView extends android.support.v7.widget.AppCompatTextView {
+public class CustomTextView extends androidx.appcompat.widget.AppCompatTextView {
 
 
     private Context mContext;

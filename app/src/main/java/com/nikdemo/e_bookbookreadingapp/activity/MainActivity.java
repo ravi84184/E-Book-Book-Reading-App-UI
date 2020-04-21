@@ -3,16 +3,16 @@ package com.nikdemo.e_bookbookreadingapp.activity;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.widget.TextView;
 
 import com.nikdemo.e_bookbookreadingapp.R;
@@ -25,11 +25,8 @@ import com.nikdemo.e_bookbookreadingapp.menu.DrawerAdapter;
 import com.nikdemo.e_bookbookreadingapp.menu.DrawerItem;
 import com.nikdemo.e_bookbookreadingapp.menu.SimpleItem;
 import com.nikdemo.e_bookbookreadingapp.utils.BaseActivity;
-import com.squareup.picasso.MemoryPolicy;
-import com.squareup.picasso.Picasso;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
-import com.yarolegovich.slidingrootnav.callback.DragStateListener;
 
 import java.util.Arrays;
 

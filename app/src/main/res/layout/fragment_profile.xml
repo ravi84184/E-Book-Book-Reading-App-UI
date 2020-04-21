@@ -13,7 +13,7 @@
         android:layout_height="@dimen/_100sdp"
         android:background="@color/yellow" />
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/cd_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
 
 
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -88,7 +88,7 @@
 
         <include layout="@layout/row_plan_view" />
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
@@ -156,7 +156,7 @@
                         app:fontName="@string/font_roboto_regular" />
                 </LinearLayout>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 

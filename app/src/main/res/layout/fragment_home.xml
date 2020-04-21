@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <android.support.v4.view.ViewPager
+        <androidx.viewpager.widget.ViewPager
             android:id="@+id/vp_slider"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_150sdp" />
@@ -38,7 +38,7 @@
         app:fontName="@string/font_roboto_bold" />
 
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rl_book"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

@@ -1,13 +1,12 @@
 package com.nikdemo.e_bookbookreadingapp.adapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v4.view.PagerAdapter;
-import android.support.v7.widget.CardView;
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.PagerAdapter;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.nikdemo.e_bookbookreadingapp.R;

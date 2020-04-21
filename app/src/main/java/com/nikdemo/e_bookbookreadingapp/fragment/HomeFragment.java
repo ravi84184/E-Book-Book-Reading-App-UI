@@ -1,12 +1,13 @@
 package com.nikdemo.e_bookbookreadingapp.fragment;
 
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.ViewPager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,15 +19,24 @@ import com.nikdemo.e_bookbookreadingapp.R;
 import com.nikdemo.e_bookbookreadingapp.adapter.BookAdapter;
 import com.nikdemo.e_bookbookreadingapp.adapter.SliderAdapter;
 import com.nikdemo.e_bookbookreadingapp.model.BookModel;
+import com.nikdemo.e_bookbookreadingapp.retrofit.APIConst;
+import com.nikdemo.e_bookbookreadingapp.retrofit.IPassinglist;
+import com.nikdemo.e_bookbookreadingapp.retrofit.RetroFitLogic;
 import com.nikdemo.e_bookbookreadingapp.utils.Constants;
+import com.nikdemo.e_bookbookreadingapp.utils.GKProgrssDialog;
+import com.nikdemo.e_bookbookreadingapp.utils.TinyDB;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import static com.nikdemo.e_bookbookreadingapp.retrofit.APIConst.LOGIN_API_REQ;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements IPassinglist {
     private static final String TAG = "HomeFragment";
     ViewPager vp_slider;
     LinearLayout rl_point;
@@ -35,6 +45,9 @@ public class HomeFragment extends Fragment {
     int currentPosition = 0;
     private View view;
     private RecyclerView rl_book;
+
+    private ProgressDialog progressDialog;
+    private TinyDB tinyDB;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,8 +69,26 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
+    void getCategoryData(){
+        if (progressDialog != null) {
+            progressDialog.show();
+        }
+        Map<String, Object> map = new HashMap<>();
+//        map.put("user_email", edt_email.getText().toString().trim());
+//        map.put("user_password", edtPassword.getText().toString().trim());
+//            map.put("device_token", tinyDB.getString("fcmToken"));
+//            map.put("device_id", deviceId);
+        map.put("device_type", "android");
+        RetroFitLogic retroFitLogic = new RetroFitLogic(getContext(), this);
+        retroFitLogic.loadResult(APIConst.LOGIN_API_NAME, map, LOGIN_API_REQ);
+    }
 
     private void initUI() {
+        progressDialog = new GKProgrssDialog(getContext(), R.style.MyTheme);
+        progressDialog.setTitle("Please wait..");
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setCancelable(false);
+        tinyDB = new TinyDB(getContext());
 
         rl_book = view.findViewById(R.id.rl_book);
         rl_point = view.findViewById(R.id.rl_point);
@@ -104,4 +135,8 @@ public class HomeFragment extends Fragment {
         }
     }
 
+    @Override
+    public void passingList(String response, int number) {
+
+    }
 }

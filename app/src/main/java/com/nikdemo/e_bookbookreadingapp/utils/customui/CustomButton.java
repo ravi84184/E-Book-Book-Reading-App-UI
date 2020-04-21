@@ -10,7 +10,7 @@ import com.nikdemo.e_bookbookreadingapp.R;
 import com.nikdemo.e_bookbookreadingapp.utils.Constants;
 
 
-public class CustomButton extends android.support.v7.widget.AppCompatButton {
+public class CustomButton extends androidx.appcompat.widget.AppCompatButton {
 
 
     private Context mContext;

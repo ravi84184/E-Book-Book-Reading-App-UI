@@ -8,9 +8,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Constants {
+    public static final String USER_ID = "user_id";
+    public static final String USER_NAME = "user_name";
+    public static final String USER_TYPE = "user_type";
+    public static final String USER_MOBILE = "user_mobile";
+    public static final String USER_EMAIL = "user_email";
     public static String sourceRobotoRegular = "fonts/Roboto-Regular.ttf";
     public static String sourceRobotoBold = "fonts/Roboto-Bold.ttf";
     public static String sourceRobotoLight= "fonts/RobotoCondensed-Light.ttf";
+
+
+    public static String USER_TOKEN= "user_token";
 
     public static ArrayList<BookModel> getBookData() {
         ArrayList<BookModel> bookList = new ArrayList<>();

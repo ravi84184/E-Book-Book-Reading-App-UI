@@ -10,7 +10,7 @@ import com.nikdemo.e_bookbookreadingapp.R;
 import com.nikdemo.e_bookbookreadingapp.utils.Constants;
 
 
-public class CustomCheckBox extends android.support.v7.widget.AppCompatCheckBox {
+public class CustomCheckBox extends androidx.appcompat.widget.AppCompatCheckBox {
 
 
     private Context mContext;
